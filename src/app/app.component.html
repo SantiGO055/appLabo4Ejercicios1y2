@@ -1,3 +1,22 @@
-<h1>Hola Mundo!</h1>
+{{title}}
+
+<br>
+<br>
+<h3>Edad 1:</h3>
+<!-- <input type="text" [(ngModel)]="title"> -->
+<input type="number" [(ngModel)]="edad1">
+<br>
+<h3>Edad 2:</h3>
+<input type="number" [(ngModel)]="edad2">
+<br>
+
+
+<button (click)=CalcularSuma() (click)=CalcularPromedio() (click)=MostrarResultado() (click)="ocultar = false">Calcular</button>
+<!-- <div (hide)="ocultar = true">
+  <button (click)="ocultar = true"> Ocultar </button>
+</div> -->
+<p >La suma de las edades es: {{resultadoSuma}} </p>
+<p >El promedio de las edades es: {{resultadoPromedio}}</p>
+<button (click)="LimpiarTexto()">Limpiar cuadros de textos</button>
 
 <router-outlet></router-outlet>
