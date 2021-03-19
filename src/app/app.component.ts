@@ -23,7 +23,10 @@ export class AppComponent {
     this.resultadoPromedio = (this.edad1 + this.edad2) / 2;
   }
   MostrarResultado(){
-    this.ocultar = true;
+    if(this.ocultar == true){
+      this.ocultar = false;
+    }
+    
   }
   LimpiarTexto(){
     this.resultadoPromedio = 0;
@@ -31,5 +34,7 @@ export class AppComponent {
     this.edad1 = 0;
     this.edad2 = 0;
     
+  }
+  ngOnInit() {
   }
 }

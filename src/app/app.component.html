@@ -12,11 +12,11 @@
 
 
 <button (click)=CalcularSuma() (click)=CalcularPromedio() (click)=MostrarResultado() (click)="ocultar = false">Calcular</button>
-<!-- <div (hide)="ocultar = true">
-  <button (click)="ocultar = true"> Ocultar </button>
-</div> -->
-<p >La suma de las edades es: {{resultadoSuma}} </p>
-<p >El promedio de las edades es: {{resultadoPromedio}}</p>
-<button (click)="LimpiarTexto()">Limpiar cuadros de textos</button>
+<div [hidden]="ocultar">
+  
+  <p >La suma de las edades es: {{resultadoSuma}} </p>
+  <p >El promedio de las edades es: {{resultadoPromedio}}</p>
+</div>
+<button class="btn btn-info my-2" (click)="LimpiarTexto()" (click)="ocultar = true">Limpiar cuadros de textos</button>
 
 <router-outlet></router-outlet>
