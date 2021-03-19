@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Usuario } from './usuarios.modelo';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,11 @@ export class AppComponent {
   resultadoSuma:number= 0;
   resultadoPromedio:number= 0;
   ocultar = true;
-  
+  ocultarEjercicio1 = true;
+  usuario = new Usuario("miUsuario","pepito123");
+  usuarioTexto:String = "";
+  ocultarBoton = true;
+
   CalcularSuma(){
     
     this.resultadoSuma = this.edad1 + this.edad2;
@@ -23,10 +28,7 @@ export class AppComponent {
     this.resultadoPromedio = (this.edad1 + this.edad2) / 2;
   }
   MostrarResultado(){
-    if(this.ocultar == true){
-      this.ocultar = false;
-    }
-    
+    this.ocultar = !this.ocultar;
   }
   LimpiarTexto(){
     this.resultadoPromedio = 0;
@@ -35,6 +37,16 @@ export class AppComponent {
     this.edad2 = 0;
     
   }
+  MostrarEjercicio1(){
+    if(this.ocultarEjercicio1 == true){
+      this.ocultarEjercicio1 = false;
+    }
+  }
   ngOnInit() {
+  }
+  AlternarOcultarMostrar(){
+    if(this.ocultarBoton){
+      this.ocultarBoton = true;
+    }
   }
 }
