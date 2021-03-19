@@ -1,34 +1,37 @@
 
-
-<button 
-class="btn btn-info my-2" 
-(click)=MostrarEjercicio1() >Mostrar ejercicio 1</button>
-
-<div [hidden]="ocultarEjercicio1">
-
-  <!-- <br>
-  <br> -->
-  <h3>Edad 1:</h3>
-  <input type="number" [(ngModel)]="edad1">
-  <!-- <br> -->
-  <h3>Edad 2:</h3>
-  <input type="number" [(ngModel)]="edad2">
-  <!-- <br> -->
+<div >
 
 
-  <button (click)=CalcularSuma() 
-  (click)=CalcularPromedio() 
-  (click)=MostrarResultado() 
-  (click)="ocultar = false" 
-  class="btn btn-info my-2">Calcular</button>
+  <button 
+  class="btn btn-info my-2" 
+  (click)=MostrarEjercicio1() >Mostrar ejercicio 1</button>
 
-  <div [hidden]="ocultar">
-    
-    <p >La suma de las edades es: {{resultadoSuma}} </p>
-    <p >El promedio de las edades es: {{resultadoPromedio}}</p>
+  <div [hidden]="ocultarEjercicio1">
+
+    <!-- <br>
+    <br> -->
+    <h3>Edad 1:</h3>
+    <input type="number" [(ngModel)]="edad1">
+    <!-- <br> -->
+    <h3>Edad 2:</h3>
+    <input type="number" [(ngModel)]="edad2">
+    <!-- <br> -->
+
+
+    <button (click)=CalcularSuma() 
+    (click)=CalcularPromedio() 
+    (click)=MostrarResultado() 
+    (click)="ocultar = false" 
+    class="btn btn-info my-2">Calcular</button>
+
+    <div [hidden]="ocultar">
+      
+      <p >La suma de las edades es: {{resultadoSuma}} </p>
+      <p >El promedio de las edades es: {{resultadoPromedio}}</p>
+    </div>
+    <button class="btn btn-info my-2" (click)="LimpiarTexto()" (click)="ocultar = true">Limpiar cuadros de textos</button>
+
   </div>
-  <button class="btn btn-info my-2" (click)="LimpiarTexto()" (click)="ocultar = true">Limpiar cuadros de textos</button>
-
 </div>
 
 
