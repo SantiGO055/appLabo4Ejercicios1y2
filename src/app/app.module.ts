@@ -1,4 +1,3 @@
-import { ApiServiceService } from './services/api-service.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -11,8 +10,7 @@ import { ErrorComponent } from './error/error.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
 import { EjercicioUnoComponent } from './ejercicio-uno/ejercicio-uno.component';
-import { WeatherComponent } from './weather/weather.component';
-import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -22,16 +20,14 @@ import { HttpClientModule } from '@angular/common/http';
     ErrorComponent,
     NavbarComponent,
     RegisterComponent,
-    EjercicioUnoComponent,
-    WeatherComponent
+    EjercicioUnoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    FormsModule
   ],
-  providers: [ApiServiceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
